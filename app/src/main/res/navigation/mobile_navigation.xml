@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_product">
+
+    <fragment
+        android:id="@+id/nav_product"
+        android:name="emsi.pfa.pambouparis.ui.produit.HomeFragment"
+        android:label="Products"
+        tools:layout="@layout/fragment_product" >
+        <action
+            android:id="@+id/navigTodetaillepro"
+            app:destination="@+id/nav_to_detail_product"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            />
+        <action
+            android:id="@+id/navigTopanier"
+            app:destination="@+id/nav_to_panier"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_to_panier"
+        android:name="emsi.pfa.pambouparis.ui.gallery.PanierFragment"
+        android:label="Decoration"
+        tools:layout="@layout/fragment_panier" />
+
+    <fragment
+        android:id="@+id/nav_to_detail_product"
+        android:name="emsi.pfa.pambouparis.ui.gallery.DetailleFragment"
+        android:label="Decoration"
+        tools:layout="@layout/fragment_detaille" />
+
+    <fragment
+        android:id="@+id/nav_decoration"
+        android:name="emsi.pfa.pambouparis.ui.gallery.GalleryFragment"
+        android:label="Decoration"
+        tools:layout="@layout/fragment_decoration" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="emsi.pfa.pambouparis.ui.slideshow.SlideshowFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
